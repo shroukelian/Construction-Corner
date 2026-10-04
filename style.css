@@ -2043,3 +2043,50 @@ footer {
     font-size: 14px;
   }
 }
+
+.location-section {
+    position: relative;
+    z-index: 2;
+}
+
+.map-frame {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-top: 25px;
+    background: #f3f5f4;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+.map-button {
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .location-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .map-frame {
+        height: 320px;
+    }
+}
